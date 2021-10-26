@@ -1,4 +1,4 @@
-  spring:
+spring:
 
   h2:
     console:
@@ -6,7 +6,7 @@
 
   datasource:
       url: jdbc:h2:mem:testdb
-      driver-class-name : org.h2.Driver
+      driver-class-name: org.h2.Driver
       username: sa
       password:
 
@@ -18,9 +18,13 @@
         hibernate:
           format_sql: true
           show_sql: true
+      defer-datasource-initialization: true
 
-loggin:
+jwt:
+  header: Authorizetion
+  secret : c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  token-validity-in-seconds: 86400
+
+logging:
   level:
     com.jwtEx: DEBUG
-
-spring.jpa.defer-datasource-initialization: true
